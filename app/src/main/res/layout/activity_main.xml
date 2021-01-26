@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#CFCFCF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/search"
+        android:id="@+id/layout"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Tv"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:text="로또번호 랜덤생성"
+        android:background="@android:color/white"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        android:id="@+id/LNum"
+        android:background="#ffffff"
+        />
+
+    <Button
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Btn"
+        android:text="새로고침"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#7112FF"
+        android:background="@drawable/line_shape"/>
+</LinearLayout>
