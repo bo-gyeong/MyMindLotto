@@ -1,3 +1,98 @@
 <resources>
-    <string name="app_name">LottoApp</string>
+    <string name="app_name">내맘대로또</string>
+
+<!--    splash-->
+    <string name="splashTitleTextView">내맘대로또</string>
+    <string name="splashContextTextView">로또번호 랜덤 생성기</string>
+
+<!--    activity_main-->
+    <string name="mainTitleTextView">로또번호 랜덤생성</string>
+    <string name="F5Btn">새로고침</string>
+    <string name="PrizeNumBtn">회차별 당첨번호</string>
+    <string name="selectNBtn">원하는 숫자로 조합</string>
+    <string name="QRScanBtn">큐알코드 스캔</string>
+    <string name="saveRandomNumBtn">저장하기</string>
+    <string name="seeRandomNumBtn">저장내역 보기</string>
+    <string name="PutNBtn">원하는 숫자로 조합</string>
+    <string name="BtnPFin">입력 완료</string>
+
+<!--    prize_nums-->
+    <string name="inputPrizeNumEditText">회차 번호를 입력하세요</string>
+    <string name="searchPrizeNumBtn">검색</string>
+
+<!--    guide-->
+    <string name="guideTitleTextView">조합하는 방법</string>
+    <string name="guideContext0TextView">공을 클릭하여 원하는 숫자로 번호를 생성해보세요</string>
+    <string name="num1GuideTextView">초기화 상태</string>
+    <string name="num2GuideTextView">선택 상태</string>
+    <string name="num3GuideTextView">제외 상태</string>
+    <string name="num1ClickTextView">3번 클릭</string>
+    <string name="num2ClickTextView">1번 클릭</string>
+    <string name="num3ClickTextView">2번 클릭</string>
+    <string name="numGuide1TextView">1. 초기화 상태</string>
+    <string name="guideContext1TextView">조합 버튼에 따라 포함이 될 수도 있고, 안 될수도 있는 번호들</string>
+    <string name="numGuide2TextView">2. 선택 상태</string>
+    <string name="guideContext2TextView">랜덤 생성 시 포함시킬 번호들</string>
+    <string name="guideContext2_1TextView">에서는 선택한 번호를 랜덤으로 포함</string>
+    <string name="numGuide3TextView">3. 제외 상태</string>
+    <string name="guideContext3TextView">랜덤 생성 시 절대 포함시키지 않는 번호들</string>
+    <string name="guideContext4TextView">조합 버튼 클릭 후 <b>\'새로고침\'</b> 버튼을 클릭할 때마다 새로운 랜덤번호를 생성할 수 있습니다.</string>
+    <string name="closeBtn">다시보지않기</string>
+
+<!--    select_nums-->
+    <string name="num1Btn">1</string>
+    <string name="num2Btn">2</string>
+    <string name="num3Btn">3</string>
+    <string name="num4Btn">4</string>
+    <string name="num5Btn">5</string>
+    <string name="num6Btn">6</string>
+    <string name="num7Btn">7</string>
+    <string name="num8Btn">8</string>
+    <string name="num9Btn">9</string>
+    <string name="num10Btn">10</string>
+    <string name="num11Btn">11</string>
+    <string name="num12Btn">12</string>
+    <string name="num13Btn">13</string>
+    <string name="num14Btn">14</string>
+    <string name="num15Btn">15</string>
+    <string name="num16Btn">16</string>
+    <string name="num17Btn">17</string>
+    <string name="num18Btn">18</string>
+    <string name="num19Btn">19</string>
+    <string name="num20Btn">20</string>
+    <string name="num21Btn">21</string>
+    <string name="num22Btn">22</string>
+    <string name="num23Btn">23</string>
+    <string name="num24Btn">24</string>
+    <string name="num25Btn">25</string>
+    <string name="num26Btn">26</string>
+    <string name="num27Btn">27</string>
+    <string name="num28Btn">28</string>
+    <string name="num29Btn">29</string>
+    <string name="num30Btn">30</string>
+    <string name="num31Btn">31</string>
+    <string name="num32Btn">32</string>
+    <string name="num33Btn">33</string>
+    <string name="num34Btn">34</string>
+    <string name="num35Btn">35</string>
+    <string name="num36Btn">36</string>
+    <string name="num37Btn">37</string>
+    <string name="num38Btn">38</string>
+    <string name="num39Btn">39</string>
+    <string name="num40Btn">40</string>
+    <string name="num41Btn">41</string>
+    <string name="num42Btn">42</string>
+    <string name="num43Btn">43</string>
+    <string name="num44Btn">44</string>
+    <string name="num45Btn">45</string>
+
+    <string name="allSelectBtn">전체선택</string>
+    <string name="allOutBtn">전체제외</string>
+    <string name="allInitialBtn">초기화</string>
+
+    <string name="onlySelectCombBtn">선택한 번호만 이용하여 조합</string>
+    <string name="mixCombBtn">선택한번호 + 초기화번호 조합</string>
+    <string name="saveCombNumBtn">현재상태 저장하기</string>
+    <string name="callCombNumBtn">저장내역 불러오기</string>
+
 </resources>

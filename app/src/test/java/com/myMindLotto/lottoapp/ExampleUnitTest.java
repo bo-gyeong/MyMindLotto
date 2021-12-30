@@ -1,4 +1,4 @@
-package com.example.lottoapp;
+package com.myMindLotto.lottoapp;
 
 import org.junit.Test;
 

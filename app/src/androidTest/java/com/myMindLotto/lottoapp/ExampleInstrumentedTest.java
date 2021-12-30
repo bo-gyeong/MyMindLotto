@@ -1,4 +1,4 @@
-package com.example.lottoapp;
+package com.myMindLotto.lottoapp;
 
 import android.content.Context;
 

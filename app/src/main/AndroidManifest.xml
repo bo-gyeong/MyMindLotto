@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.lottoapp">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:allowBackup="true"
@@ -8,14 +11,37 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:hardwareAccelerated="false"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.myMindLotto.lottoapp.Splash"
+            android:windowSoftInputMode="adjustNothing"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.myMindLotto.lottoapp.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.myMindLotto.lottoapp.PrizeNums"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.myMindLotto.lottoapp.SelectNums"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.myMindLotto.lottoapp.QRWebView"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"
+            android:stateNotNeeded="true"/>
+        <activity android:name="com.myMindLotto.lottoapp.SeeLottoNumListView"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.myMindLotto.lottoapp.SeeCombNumListView"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.myMindLotto.lottoapp.Guide"
+            android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">내맘대로또</string>
+
+    <!--    splash-->
+    <string name="splashTitleTextView">내맘대로또</string>
+    <string name="splashContextTextView">Lotto number random generator</string>
+
+    <!--    activity_main-->
+    <string name="mainTitleTextView">Lotto number random creation</string>
+    <string name="F5Btn">Refresh</string>
+    <string name="PrizeNumBtn">The winning numbers for each episode</string>
+    <string name="selectNBtn">Combination of the numbers you want</string>
+    <string name="QRScanBtn">QR code scan</string>
+    <string name="saveRandomNumBtn">Save</string>
+    <string name="seeRandomNumBtn">Check the saved details</string>
+    <string name="PutNBtn">Combination of the numbers you want</string>
+    <string name="BtnPFin">Input completion</string>
+
+    <!--    prize_nums-->
+    <string name="inputPrizeNumEditText">Please enter the episode number</string>
+    <string name="searchPrizeNumBtn">Search</string>
+
+    <!--    guide-->
+    <string name="guideTitleTextView">How to combine</string>
+    <string name="guideContext0TextView">Click on the ball to generate the number you want</string>
+    <string name="num1GuideTextView">Initial</string>
+    <string name="num2GuideTextView">Selection</string>
+    <string name="num3GuideTextView">Exclusion</string>
+    <string name="num1ClickTextView">3 clicks</string>
+    <string name="num2ClickTextView">1 clicks</string>
+    <string name="num3ClickTextView">2 clicks</string>
+    <string name="numGuide1TextView">1. Initialization Status</string>
+    <string name="guideContext1TextView">Numbers that may or may not be included depending on the combination button</string>
+    <string name="numGuide2TextView">2. Selection Status</string>
+    <string name="guideContext2TextView">Numbers to include in random generation</string>
+    <string name="guideContext2_1TextView">randomly includes the selected number</string>
+    <string name="numGuide3TextView">3. Exclusion status</string>
+    <string name="guideContext3TextView">Numbers that never include in random generation</string>
+    <string name="guideContext4TextView">After clicking the Combination button You can create a new random number each time you click the <b>\'Refresh button\'</b></string>
+    <string name="closeBtn">Don\'t watch it again</string>
+
+    <!--    select_nums-->
+    <string name="num1Btn">1</string>
+    <string name="num2Btn">2</string>
+    <string name="num3Btn">3</string>
+    <string name="num4Btn">4</string>
+    <string name="num5Btn">5</string>
+    <string name="num6Btn">6</string>
+    <string name="num7Btn">7</string>
+    <string name="num8Btn">8</string>
+    <string name="num9Btn">9</string>
+    <string name="num10Btn">10</string>
+    <string name="num11Btn">11</string>
+    <string name="num12Btn">12</string>
+    <string name="num13Btn">13</string>
+    <string name="num14Btn">14</string>
+    <string name="num15Btn">15</string>
+    <string name="num16Btn">16</string>
+    <string name="num17Btn">17</string>
+    <string name="num18Btn">18</string>
+    <string name="num19Btn">19</string>
+    <string name="num20Btn">20</string>
+    <string name="num21Btn">21</string>
+    <string name="num22Btn">22</string>
+    <string name="num23Btn">23</string>
+    <string name="num24Btn">24</string>
+    <string name="num25Btn">25</string>
+    <string name="num26Btn">26</string>
+    <string name="num27Btn">27</string>
+    <string name="num28Btn">28</string>
+    <string name="num29Btn">29</string>
+    <string name="num30Btn">30</string>
+    <string name="num31Btn">31</string>
+    <string name="num32Btn">32</string>
+    <string name="num33Btn">33</string>
+    <string name="num34Btn">34</string>
+    <string name="num35Btn">35</string>
+    <string name="num36Btn">36</string>
+    <string name="num37Btn">37</string>
+    <string name="num38Btn">38</string>
+    <string name="num39Btn">39</string>
+    <string name="num40Btn">40</string>
+    <string name="num41Btn">41</string>
+    <string name="num42Btn">42</string>
+    <string name="num43Btn">43</string>
+    <string name="num44Btn">44</string>
+    <string name="num45Btn">45</string>
+
+    <string name="allSelectBtn">Select all</string>
+    <string name="allOutBtn">Excluding all</string>
+    <string name="allInitialBtn">Initialization</string>
+
+    <string name="onlySelectCombBtn">Combination using only the selection numbers</string>
+    <string name="mixCombBtn">Selection numbers + Initialization numbers combination</string>
+    <string name="saveCombNumBtn">Save the current status</string>
+    <string name="callCombNumBtn">Load save history</string>
+</resources>
