@@ -1,4 +1,4 @@
-package com.myMindLotto.lottoapp;
+package com.myMindLotto.lottoapp.SeeLottoNumListView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,6 +16,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.lottoapp.R;
+import com.myMindLotto.lottoapp.LottoNumDB;
 
 import java.util.ArrayList;
 

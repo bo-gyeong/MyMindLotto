@@ -1,4 +1,4 @@
-package com.myMindLotto.lottoapp;
+package com.myMindLotto.lottoapp.SeeLottoNumListView;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.lottoapp.R;
+import com.myMindLotto.lottoapp.common.SetColor;
 
 import java.util.ArrayList;
 

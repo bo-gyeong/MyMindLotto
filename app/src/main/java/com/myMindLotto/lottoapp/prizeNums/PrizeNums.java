@@ -1,4 +1,4 @@
-package com.myMindLotto.lottoapp;
+package com.myMindLotto.lottoapp.prizeNums;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,23 +20,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.example.lottoapp.R;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.myMindLotto.lottoapp.common.SetColor;
 
 import org.jsoup.Jsoup;
 import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class PrizeNums extends AppCompatActivity {
 
@@ -45,8 +39,7 @@ public class PrizeNums extends AppCompatActivity {
     Button searchPrizeNumBtn;
     RecyclerView prizeNumRecycler;
 
-    RequestQueue requestQueue;
-    JsonObject jsonObject;
+    Call<PrizeNumsDTO> call;
     MakePrizeNumsRecycler makePrizeRecycler;
 
     int latestDrwNo = 0;
@@ -65,28 +58,24 @@ public class PrizeNums extends AppCompatActivity {
 
         getLatestDrwNo();
 
-        if(requestQueue == null){
-            requestQueue = Volley.newRequestQueue(getApplicationContext());
-        }
-
         searchPrizeNumBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String drwNo = inputDrwNoEdtTxt.getText().toString();
                 if (!drwNo.equals("")){
-                    findDrwNo(drwNo);
+                    getPrizeNum(drwNo);
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "번호를 입력해주세요", Toast.LENGTH_SHORT).show();
                 }
             }
-        });  //검색 버튼 클릭 시
+        });  //검색 버튼 클릭 시 (회차번호 찾기)
     }
 
-    StringRequest request;
-
-    void getPrizeNum(String url, String drwNo){
+    void getPrizeNum(String drwNo){
         View dialogView = getLayoutInflater().inflate(R.layout.call_prize_num_dialog, null);
+        TextView dateTxt = (TextView) dialogView.findViewById(R.id.dateTextView);
+
         ImageView[] numImg = new ImageView[7];
         Integer[] numImgId = new Integer[]{R.id.num1ImgView, R.id.num2ImgView, R.id.num3ImgView
                 , R.id.num4ImgView, R.id.num5ImgView, R.id.num6ImgView, R.id.bonusNumImgView};
@@ -106,39 +95,32 @@ public class PrizeNums extends AppCompatActivity {
         dlg.setPositiveButton("확인", null);
 
         SetColor setColor = new SetColor();
-        request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+        call = RetrofitClient.getApiService().getPrizeInfo(drwNo);
+        call.enqueue(new Callback<PrizeNumsDTO>() {
             @Override
-            public void onResponse(String response) {
-                jsonObject = (JsonObject) JsonParser.parseString(response);
+            public void onResponse(Call<PrizeNumsDTO> call, Response<PrizeNumsDTO> response) {
+                PrizeNumsDTO result = response.body();
 
-                for (int i=1; i<=6; i++){
-                    String prizeNum = String.valueOf(jsonObject.get("drwtNo" + i));
-                    numTxt[i-1].setText(prizeNum);
-                    setColor.changeColor(numImg, i-1, Integer.parseInt(numTxt[i-1].getText().toString()));
+                dateTxt.setText(result.getDate());
+
+                for (int i=0; i<6; i++){
+                    String[] prizeNumArr = result.toString().split(",");
+                    numTxt[i].setText(prizeNumArr[i]);
+                    setColor.changeColor(numImg, i, Integer.parseInt(numTxt[i].getText().toString()));
                 } //당첨번호 받아서 대화상자의 공 색상 변경
 
-                String bonusNum = String.valueOf(jsonObject.get("bnusNo"));
+                String bonusNum = result.getBnusNo();
                 numTxt[6].setText(bonusNum);
                 setColor.changeColor(numImg, 6, Integer.parseInt(numTxt[6].getText().toString()));
 
                 dlg.show();
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
 
-            }
-        }) {
-            @Nullable
             @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                HashMap<String, String> params = new HashMap<>();
-                return params;
+            public void onFailure(Call<PrizeNumsDTO> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "네트워크 연결상태를 확인해주세요", Toast.LENGTH_LONG).show();
             }
-        };
-
-        request.setShouldCache(false);
-        requestQueue.add(request);
+        });
     }  //크롤링
 
     Handler handler = new Handler(){
@@ -152,6 +134,7 @@ public class PrizeNums extends AppCompatActivity {
         }
     };
 
+    // 최신 ~ 1회차까지의 리스트 만들기 위해 최신 회차 받아오는 메소드
     private void getLatestDrwNo(){
         String url = "https://www.dhlottery.co.kr/gameResult.do?method=byWin";
         final Bundle bundle = new Bundle();
@@ -207,19 +190,9 @@ public class PrizeNums extends AppCompatActivity {
     }
 
     public void makeDialog(int position){
-        String url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=";
         String drwNo = String.valueOf(latestDrwNo-position);
-        url += drwNo;
-
-        getPrizeNum(url, drwNo);
+        getPrizeNum(drwNo);
     }  //리사이클러뷰 아이템 클릭 시 해당 회차의 대화상자 만들기
-
-    private void findDrwNo(String drwNo){
-        String url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=";
-        url += drwNo;
-
-        getPrizeNum(url, drwNo);
-    }  //회차번호 찾기
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

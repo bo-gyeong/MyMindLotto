@@ -1,4 +1,4 @@
-package com.myMindLotto.lottoapp;
+package com.myMindLotto.lottoapp.QRWebView;
 
 import android.content.Intent;
 import android.os.Bundle;

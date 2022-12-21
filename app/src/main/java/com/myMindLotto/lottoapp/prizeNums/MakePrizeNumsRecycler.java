@@ -1,4 +1,4 @@
-package com.myMindLotto.lottoapp;
+package com.myMindLotto.lottoapp.prizeNums;
 
 import android.content.Context;
 import android.view.LayoutInflater;

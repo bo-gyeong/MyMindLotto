@@ -1,4 +1,4 @@
-package com.myMindLotto.lottoapp;
+package com.myMindLotto.lottoapp.prizeNums;
 
 // 회차별 당첨번호 리사이클러뷰 커스텀 위해 회차 정보 가져오는 코드
 public class PrizeNumItem {

@@ -25,21 +25,21 @@
         </activity>
         <activity android:name="com.myMindLotto.lottoapp.MainActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.myMindLotto.lottoapp.PrizeNums"
+        <activity android:name="com.myMindLotto.lottoapp.prizeNums.PrizeNums"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.myMindLotto.lottoapp.SelectNums"
+        <activity android:name="com.myMindLotto.lottoapp.SelectNums.SelectNums"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.myMindLotto.lottoapp.QRWebView"
+        <activity android:name="com.myMindLotto.lottoapp.QRWebView.QRWebView"
             android:screenOrientation="portrait"/>
         <activity android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="portrait"
             tools:replace="android:screenOrientation"
             android:stateNotNeeded="true"/>
-        <activity android:name="com.myMindLotto.lottoapp.SeeLottoNumListView"
+        <activity android:name="com.myMindLotto.lottoapp.SeeLottoNumListView.SeeLottoNumListView"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.myMindLotto.lottoapp.SeeCombNumListView"
+        <activity android:name="com.myMindLotto.lottoapp.SelectNums.SeeCombNumListView"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.myMindLotto.lottoapp.Guide"
+        <activity android:name="com.myMindLotto.lottoapp.SelectNums.Guide"
             android:screenOrientation="portrait"/>
 
     </application>

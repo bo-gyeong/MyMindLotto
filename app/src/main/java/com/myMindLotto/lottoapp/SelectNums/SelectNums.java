@@ -1,4 +1,4 @@
-package com.myMindLotto.lottoapp;
+package com.myMindLotto.lottoapp.SelectNums;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -23,6 +23,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.example.lottoapp.R;
+import com.myMindLotto.lottoapp.LottoNumDB;
+import com.myMindLotto.lottoapp.MainActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

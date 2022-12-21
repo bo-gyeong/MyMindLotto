@@ -1,4 +1,4 @@
-package com.myMindLotto.lottoapp;
+package com.myMindLotto.lottoapp.QRWebView;
 
 public class CaptureActivity extends com.journeyapps.barcodescanner.CaptureActivity {
 

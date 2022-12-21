@@ -15,6 +15,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.lottoapp.R;
+import com.myMindLotto.lottoapp.QRWebView.QRWebView;
+import com.myMindLotto.lottoapp.SeeLottoNumListView.SeeLottoNumListView;
+import com.myMindLotto.lottoapp.SelectNums.SelectNums;
+import com.myMindLotto.lottoapp.common.SetColor;
+import com.myMindLotto.lottoapp.prizeNums.PrizeNums;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -243,23 +248,3 @@ public class MainActivity extends AppCompatActivity implements Serializable {
         }  //선택한숫자+초기화숫자 조합
     } //original() 이외의 함수들은 제외번호를 포함하지 않음
 }
-
-class SetColor{
-    void changeColor(ImageView[] numImg, int i, int num){
-        if (num<11){
-            numImg[i].setImageResource(R.drawable.ball_shape_yellow);
-        }
-        else if (num<21){
-            numImg[i].setImageResource(R.drawable.ball_shape_blue);
-        }
-        else if (num<31){
-            numImg[i].setImageResource(R.drawable.ball_shape_red);
-        }
-        else if (num<41){
-            numImg[i].setImageResource(R.drawable.ball_shape_gray);
-        }
-        else if (num<46){
-            numImg[i].setImageResource(R.drawable.ball_shape_green);
-        }
-    }
-}  //번호에 따른 색상 지정

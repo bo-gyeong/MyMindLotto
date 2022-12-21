@@ -25,6 +25,7 @@
         <entry key="..\:/Users/jjjjy/AndroidStudioProjects/LottoApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.16302083333333334" />
         <entry key="..\:/Users/jjjjy/AndroidStudioProjects/LottoApp/app/src/main/res/drawable/line_btn.xml" value="0.16302083333333334" />
         <entry key="..\:/Users/jjjjy/AndroidStudioProjects/LottoApp/app/src/main/res/drawable/line_btn2.xml" value="0.14791666666666667" />
+        <entry key="..\:/Users/jjjjy/AndroidStudioProjects/LottoApp/app/src/main/res/drawable/line_btn_fill.xml" value="0.20925925925925926" />
         <entry key="..\:/Users/jjjjy/AndroidStudioProjects/LottoApp/app/src/main/res/drawable/round_btn.xml" value="0.16302083333333334" />
         <entry key="..\:/Users/jjjjy/AndroidStudioProjects/LottoApp/app/src/main/res/drawable/round_layout.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/jjjjy/AndroidStudioProjects/LottoApp/app/src/main/res/layout/activity_main.xml" value="0.14114583333333333" />
@@ -37,7 +38,7 @@
         <entry key="..\:/Users/jjjjy/AndroidStudioProjects/LottoApp/app/src/main/res/layout/prize_nums.xml" value="0.264" />
         <entry key="..\:/Users/jjjjy/AndroidStudioProjects/LottoApp/app/src/main/res/layout/prize_nums_list_custom.xml" value="0.2509057971014493" />
         <entry key="..\:/Users/jjjjy/AndroidStudioProjects/LottoApp/app/src/main/res/layout/prize_nums_recycler_custom.xml" value="0.146875" />
-        <entry key="..\:/Users/jjjjy/AndroidStudioProjects/LottoApp/app/src/main/res/layout/qr_webview.xml" value="0.14114583333333333" />
+        <entry key="..\:/Users/jjjjy/AndroidStudioProjects/LottoApp/app/src/main/res/layout/qr_webview.xml" value="0.176" />
         <entry key="..\:/Users/jjjjy/AndroidStudioProjects/LottoApp/app/src/main/res/layout/save_dlg_layout.xml" value="0.2" />
         <entry key="..\:/Users/jjjjy/AndroidStudioProjects/LottoApp/app/src/main/res/layout/see_combnum_listview.xml" value="0.264" />
         <entry key="..\:/Users/jjjjy/AndroidStudioProjects/LottoApp/app/src/main/res/layout/see_lottonum_listview.xml" value="0.25364583333333335" />
