@@ -50,17 +50,17 @@ public class SeeCombNumListView extends AppCompatActivity {
         sqlDB = lottoNumDB.getReadableDatabase();
         Cursor cursor = sqlDB.rawQuery("SELECT * FROM combNum;", null);
 
-        ArrayList<ListItem> listContent = new ArrayList<>();
+        ArrayList<CombListItemDTO> listContent = new ArrayList<>();
         ArrayList<String> combTitle = new ArrayList<>();
 
         while (cursor.moveToNext()){
-            ListItem listItem = new ListItem();
+            CombListItemDTO listItem = new CombListItemDTO();
 
             title = cursor.getString(0);
             date = cursor.getString(1);
 
-            listItem.titleTextView = title;
-            listItem.dateTextView = date;
+            listItem.setTitleTextView(title);
+            listItem.setDateTextView(date);
 
             listContent.add(listItem);
             combTitle.add(title);

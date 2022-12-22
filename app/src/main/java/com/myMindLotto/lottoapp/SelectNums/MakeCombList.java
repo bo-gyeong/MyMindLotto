@@ -15,10 +15,10 @@ import java.util.List;
 // 조합 후 저장한 번호 리스트 관련 코드
 public class MakeCombList extends BaseAdapter {
 
-    List<ListItem> listData = null;
+    List<CombListItemDTO> listData = null;
     int count = 0;
 
-    public MakeCombList(List<ListItem> listData)
+    public MakeCombList(List<CombListItemDTO> listData)
     {
         this.listData = listData;
         count = listData.size();
@@ -55,14 +55,9 @@ public class MakeCombList extends BaseAdapter {
         TextView titleTextView = (TextView) convertView.findViewById(R.id.titleTextView);
         TextView dateTextView = (TextView) convertView.findViewById(R.id.dateTextView);
 
-        titleTextView.setText(listData.get(position).titleTextView);
-        dateTextView.setText(listData.get(position).dateTextView);
+        titleTextView.setText(listData.get(position).getTitleTextView());
+        dateTextView.setText(listData.get(position).getDateTextView());
 
         return convertView;
     }
-}
-
-class ListItem {
-    public String titleTextView;
-    public String dateTextView;
 }
