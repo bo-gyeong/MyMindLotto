@@ -388,7 +388,7 @@
                 android:id="@+id/closeBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/round_btn"
+                android:background="@drawable/round_btn_change_background"
                 android:text="@string/closeBtn"
                 android:textColor="#ffffff"
                 android:layout_marginTop="40dp"

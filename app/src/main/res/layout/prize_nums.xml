@@ -28,7 +28,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_gravity="center"
-            android:background="@drawable/ic_baseline_search_24"/>
+            android:background="@drawable/ic_baseline_search_24_change_background"/>
 
     </LinearLayout>
 

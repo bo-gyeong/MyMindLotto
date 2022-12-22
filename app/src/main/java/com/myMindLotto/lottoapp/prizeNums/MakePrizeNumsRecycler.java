@@ -54,7 +54,6 @@ public class MakePrizeNumsRecycler extends RecyclerView.Adapter<MakePrizeNumsRec
     }
 
     class RViewHolder extends RecyclerView.ViewHolder{
-
         TextView drwNoTextView;
 
         public RViewHolder(@NonNull View itemView) {
@@ -67,11 +66,9 @@ public class MakePrizeNumsRecycler extends RecyclerView.Adapter<MakePrizeNumsRec
                 public void onClick(View v) {
                     int position = getBindingAdapterPosition();
 
-                    if (position != RecyclerView.NO_POSITION)
-                    {
+                    if (position != RecyclerView.NO_POSITION) {
                         onRItemClickListener.onRItemClickListener(v, position);
                     }
-
                 }
             });
         }

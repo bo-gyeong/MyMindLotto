@@ -258,7 +258,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="#ffffff"
-                android:background="@drawable/line_btn_fill"/>
+                android:background="@drawable/line_btn_fill_change_background"/>
 
             <Button
                 android:id="@+id/saveRandomNumBtn"
@@ -272,7 +272,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="#ffffff"
-                android:background="@drawable/line_btn_fill"/>
+                android:background="@drawable/line_btn_fill_change_background"/>
 
         </LinearLayout>
 
@@ -286,8 +286,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#ffffff">
+        android:orientation="vertical">
 
         <ListView
             android:id="@+id/mainListView"
