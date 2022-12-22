@@ -16,10 +16,10 @@ import java.util.ArrayList;
 // main 페이지에서 저장한 번호 리스트 관련 코드
 public class MakeLottoNumList extends BaseAdapter {
 
-    ArrayList<Nums> numsData = null;
+    ArrayList<NumsDTO> numsData = null;
     int count = 0;
 
-    public MakeLottoNumList(ArrayList<Nums> numsData)
+    public MakeLottoNumList(ArrayList<NumsDTO> numsData)
     {
         this.numsData = numsData;
         count = numsData.size();
@@ -66,12 +66,12 @@ public class MakeLottoNumList extends BaseAdapter {
             numTxt[i] = (TextView) convertView.findViewById(numTxtId[i]);
         }
 
-        numTxt[0].setText(String.valueOf(numsData.get(position).num1TextView));
-        numTxt[1].setText(String.valueOf(numsData.get(position).num2TextView));
-        numTxt[2].setText(String.valueOf(numsData.get(position).num3TextView));
-        numTxt[3].setText(String.valueOf(numsData.get(position).num4TextView));
-        numTxt[4].setText(String.valueOf(numsData.get(position).num5TextView));
-        numTxt[5].setText(String.valueOf(numsData.get(position).num6TextView));
+        numTxt[0].setText(String.valueOf(numsData.get(position).getNum1TextView()));
+        numTxt[1].setText(String.valueOf(numsData.get(position).getNum2TextView()));
+        numTxt[2].setText(String.valueOf(numsData.get(position).getNum3TextView()));
+        numTxt[3].setText(String.valueOf(numsData.get(position).getNum4TextView()));
+        numTxt[4].setText(String.valueOf(numsData.get(position).getNum5TextView()));
+        numTxt[5].setText(String.valueOf(numsData.get(position).getNum6TextView()));
 
         SetColor setColor = new SetColor();
 
@@ -81,13 +81,4 @@ public class MakeLottoNumList extends BaseAdapter {
 
         return convertView;
     }
-}
-
-class Nums {
-    public int num1TextView;
-    public int num2TextView;
-    public int num3TextView;
-    public int num4TextView;
-    public int num5TextView;
-    public int num6TextView;
 }

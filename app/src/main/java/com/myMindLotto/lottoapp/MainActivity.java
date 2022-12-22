@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.lottoapp.R;
 import com.myMindLotto.lottoapp.QRWebView.QRWebView;
 import com.myMindLotto.lottoapp.SeeLottoNumListView.SeeLottoNumListView;
+import com.myMindLotto.lottoapp.SelectNums.MainItemDTO;
 import com.myMindLotto.lottoapp.SelectNums.SelectNums;
 import com.myMindLotto.lottoapp.common.SetColor;
 import com.myMindLotto.lottoapp.prizeNums.PrizeNums;
@@ -88,17 +89,17 @@ public class MainActivity extends AppCompatActivity implements Serializable {
             }
         });  //새로고침 시 생성되는 번호에 따른 공 색 설정
 
-        ArrayList<MainItem> mainItems = new ArrayList<>();
+        ArrayList<MainItemDTO> mainItems = new ArrayList<>();
         String[] listItemArr = {getString(R.string.selectNBtn), getString(R.string.PrizeNumBtn)
                 , getString(R.string.QRScanBtn), getString(R.string.seeRandomNumBtn)};
         int[] listIconArr = {R.drawable.ic_baseline_shuffle_24, R.drawable.ic_baseline_fact_check_24
                             , R.drawable.ic_baseline_qr_code_scanner_24, R.drawable.ic_baseline_dehaze_24};
 
         for (int i=0; i<listItemArr.length; i++){
-            MainItem mainItem = new MainItem();
+            MainItemDTO mainItem = new MainItemDTO();
 
-            mainItem.listItemTextView = listItemArr[i];
-            mainItem.listIconImgView = listIconArr[i];
+            mainItem.setListItemTextView(listItemArr[i]);
+            mainItem.setListIconImgView(listIconArr[i]);
 
             mainItems.add(mainItem);
         }

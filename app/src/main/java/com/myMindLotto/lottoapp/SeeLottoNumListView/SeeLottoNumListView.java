@@ -44,10 +44,10 @@ public class SeeLottoNumListView extends AppCompatActivity {
         Cursor cursor = sqlDB.rawQuery("SELECT * FROM lottoNum;", null);
 
         ArrayList<String> allLottoNums = new ArrayList<>();
-        ArrayList<Nums> numsContent = new ArrayList<>();
+        ArrayList<NumsDTO> numsContent = new ArrayList<>();
 
         while (cursor.moveToNext()){
-            Nums nums = new Nums();
+            NumsDTO nums = new NumsDTO();
 
             allLottoNums.add(cursor.getString(0));
             numFirst = cursor.getInt(1);
@@ -57,12 +57,12 @@ public class SeeLottoNumListView extends AppCompatActivity {
             numFifth = cursor.getInt(5);
             numSixth = cursor.getInt(6);
 
-            nums.num1TextView = numFirst;
-            nums.num2TextView = numSecond;
-            nums.num3TextView = numThird;
-            nums.num4TextView = numFourth;
-            nums.num5TextView = numFifth;
-            nums.num6TextView = numSixth;
+            nums.setNum1TextView(numFirst);
+            nums.setNum2TextView(numSecond);
+            nums.setNum3TextView(numThird);
+            nums.setNum4TextView(numFourth);
+            nums.setNum5TextView(numFifth);
+            nums.setNum6TextView(numSixth);
 
             numsContent.add(nums);
         }
